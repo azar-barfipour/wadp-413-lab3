@@ -20,7 +20,8 @@ router.post("/leave-note", (req, res, next) => {
 
 router.get("/read-note", (req, res, next) => {
   const notes = req.notes;
-  res.sendFile(path.join(__dirname, "public/views", "read.html"));
+  //   res.sendFile(path.join(__dirname, "public/views", "read.html"));
+  res.render("read", notes);
 });
 
 module.exports = router;

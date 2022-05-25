@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 
 const app = express();
+app.set("view engin", "ejs");
+app.set("views", "public/views");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 console.log(bodyParser);
